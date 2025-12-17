@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+
 @Slf4j
 @RestControllerAdvice
 public class CommonControllerAdviser {
@@ -16,9 +17,8 @@ public class CommonControllerAdviser {
     }
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<Void> handleScadaException(Exception e){
+    public ResponseEntity<Void> handleException(Exception e){
         log.error("Unhandled Exception occurred ",e);
         return ResponseEntity.internalServerError().build();
     }
-
 }
