@@ -14,8 +14,6 @@ public class AppConfig {
     public ObjectMapper mapper() {
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-
-        // Поддержка Java 8+ типов дат/времени (LocalDate и др.)
         mapper.registerModule(new JavaTimeModule());
         mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
         mapper.disable(MapperFeature.REQUIRE_HANDLERS_FOR_JAVA8_TIMES);
