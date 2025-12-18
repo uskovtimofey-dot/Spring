@@ -1,4 +1,4 @@
-package com.example.labSpring.Service;
+package com.example.labSpring.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import com.example.labSpring.model.Exception.ScadaException;

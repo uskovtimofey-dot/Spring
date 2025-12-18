@@ -1,4 +1,4 @@
-package com.example.labSpring.Service;
+package com.example.labSpring.controller;
 
 import com.example.labSpring.Service.SubstationService;
 import com.example.labSpring.model.DTO.SubstationDto;
